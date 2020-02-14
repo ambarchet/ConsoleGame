@@ -20,7 +20,7 @@ namespace Challenge_ConsoleGame
             Console.WriteLine("                                  *  Welcome to HANGMAN! *    ");
             Console.WriteLine("                                  ************************    ");
 
-            //Taking in our "Secret Word
+            //Taking in our "Secret Wordhkjhk
             Console.WriteLine("Player 1, Enter a word: ");
             string secretWord;
             secretWord = Convert.ToString(Console.ReadLine());
