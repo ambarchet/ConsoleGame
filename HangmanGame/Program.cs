@@ -11,11 +11,8 @@ namespace Challenge_ConsoleGame
     {
         static void Main(string[] args)
         {
-
             //Formatting
             Console.ForegroundColor = ConsoleColor.Blue;
-
-
             Console.WriteLine("                                  ************************    ");
             Console.WriteLine("                                  *  Welcome to HANGMAN! *    ");
             Console.WriteLine("                                  ************************    ");
@@ -25,17 +22,11 @@ namespace Challenge_ConsoleGame
             string secretWord;
             secretWord = Convert.ToString(Console.ReadLine());
 
-
-
             //Taking in player two name
-
             Console.Clear();
-
             Console.WriteLine("                                  ************************    ");
             Console.WriteLine("                                  *  Welcome to HANGMAN! *    ");
             Console.WriteLine("                                  ************************    ");
-
-
             Console.Write("Player 2, enter your Name: ");
             string name;
             name = Convert.ToString(Console.ReadLine());
@@ -44,18 +35,13 @@ namespace Challenge_ConsoleGame
             //Greeting and start game
 
             Console.Clear();
-
             Console.WriteLine("                                  ************************    ");
             Console.WriteLine("                                  *  Welcome to HANGMAN! *    ");
             Console.WriteLine("                                  ************************    ");
-
-
             Console.WriteLine("Welcome, " + name + ", Good Luck!");
             Console.WriteLine("\n\n");
 
-
             char[] firstArray = new char[secretWord.Length];
-
             for (int l = 0; l < secretWord.Length; l++)
                 firstArray[l] = '*';
             Console.WriteLine(firstArray);
@@ -67,10 +53,7 @@ namespace Challenge_ConsoleGame
             string checkAnswer = resultArray.ToString();
 
             for (int i = 0; i < secretWord.Length; i++)
-
                 resultArray[i] = '*';
-
-
             while (lives > 0 && correctGuesses < secretWord.Length)
             {
                 // Get their guessed letter
@@ -89,7 +72,6 @@ namespace Challenge_ConsoleGame
                             correctGuesses++;
                         }
                     }
-
                 }
 
                 // If we don't need to replace any letters, dock a life
@@ -100,11 +82,8 @@ namespace Challenge_ConsoleGame
                 }
 
                 // If the target word matches the guessed word, then break out
-
                 Console.WriteLine(resultArray);
             }
-
-
             if (lives == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -116,11 +95,8 @@ namespace Challenge_ConsoleGame
 
             if (correctGuesses == secretWord.Length)
                 Console.ForegroundColor = ConsoleColor.Green;
-
             Console.WriteLine("CONGRATULATIONS, YOU WON!");
             Console.ReadLine();
-
-
         }
     }
 }
